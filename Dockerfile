@@ -5,4 +5,4 @@ COPY src ./src
 RUN mvn package
 
 FROM nithya890/tomcat
-COPY --from=build /app/target/helloworld-1.0-SNAPSHOT.war /opt/tomcat/webapps
+COPY --from=build /app/target/helloworld-1.0-SNAPSHOT.war /tomcat1/webapps
