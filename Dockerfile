@@ -7,4 +7,4 @@ RUN mvn package
 FROM tomcat:9.0.53-jdk8
 RUN mkdir -p /usr/local/tomcat/webapps
 RUN chmod -R 777 /usr/local/tomcat/conf
-COPY --from=build /app/target/helloworld-1.0-SNAPSHOT.war /tomcat1/webapps/helloworld.war
+COPY --from=build /app/target/helloworld-1.0-SNAPSHOT.war /home/ubuntu/tomcat1/webapps
