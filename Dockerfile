@@ -4,5 +4,5 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn package
 
-FROM nithya890/tomcat
-COPY --from=build /app/target/helloworld-1.0-SNAPSHOT.war /tomcat1/webapps
+FROM anilkumar1146/tomcat:1.0
+COPY target/Example-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/
